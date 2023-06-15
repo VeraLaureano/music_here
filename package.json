@@ -1,0 +1,20 @@
+{
+  "name": "music_here",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeraLaureano/music_here.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeraLaureano/music_here/issues"
+  },
+  "homepage": "https://github.com/VeraLaureano/music_here#readme"
+}
