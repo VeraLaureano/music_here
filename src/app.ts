@@ -2,6 +2,7 @@ import "dotenv/config";
 import express, {json} from "express";
 import connectDB from "./config/mongo";
 import { songRouter } from "./routes/song.route";
+import { notFound } from "./middlewares/notFound";
 const app = express();
 
 const PORT: string | number = process.env.PORT || 8808;
@@ -15,6 +16,7 @@ app.get('/', (_req, res) => {
 })
 
 app.use("/api/v1/songs", songRouter);
+app.use(notFound);
 
 (async () => {
     try {

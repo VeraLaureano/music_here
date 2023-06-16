@@ -1,7 +1,8 @@
 import { Router } from "express";
-import { getAllSongs } from "../controllers/song.controller";
+import { deleteSong, getAllSongs, getOneSong, pathSong, postSong } from "../controllers/song.controller";
 const router = Router();
 
-router.route("/").get(getAllSongs);
+router.route("/").get(getAllSongs).post(postSong);
+router.route("/:id").get(getOneSong).patch(pathSong).delete(deleteSong);
 
 export { router as songRouter }
