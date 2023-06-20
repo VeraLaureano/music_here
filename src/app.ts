@@ -14,10 +14,6 @@ app.use(express.static("./public"));
 app.use(cors());
 
 // ROUTING
-app.get('/', (_req, res) => {
-    res.send("<h1>Welcome!</h1>");
-})
-
 app.use("/api/v1/songs", songRouter);
 app.use(notFound);
 
