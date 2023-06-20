@@ -1,5 +1,6 @@
 import "dotenv/config";
 import express, {json} from "express";
+import cors from "cors";
 import connectDB from "./config/mongo";
 import { songRouter } from "./routes/song.route";
 import { notFound } from "./middlewares/notFound";
@@ -9,6 +10,8 @@ const PORT: string | number = process.env.PORT || 8808;
 
 // MIDDLEWARES
 app.use(json());
+app.use(express.static("./public"));
+app.use(cors());
 
 // ROUTING
 app.get('/', (_req, res) => {
